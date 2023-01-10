@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  transition: all ease-in .3s;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(rgb(182, 244, 146),
+    rgb(51, 139, 147));
+}
+
+.header-wrapper {
+  max-width: 1280px;
+  /* background-color: rgb(231, 255, 222); */
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border: 2px solid rgb(0, 189, 113);
+  border-radius: 50%;
+  background-color: rgb(255, 250, 205);
+  cursor: pointer;
+  transition: all ease-in .3s;
+}
+
+.logo:hover {
+  border: 3px solid rgb(255, 250, 205);
+  background-color: rgb(0, 189, 113);
+  font-weight: 900;
+}
+
+.nav-menu .nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav-menu .nav-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.nav-menu a {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgb(41, 41, 41);
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+.main-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.contacts .avatar img {
+  width: 200px;
+  border-radius: 20px;
+}
+
+.contacts .contacts-data {
+  width: 80%;
+}
+
+.contacts .user-title {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.contacts .social-header {
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+}
+
+.contacts .links-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contacts .links-container .email-link img {
+  width: 48px;
+}
+
+.contacts .links-container .discord-link,
+.contacts .links-container .linkedIn-link,
+.contacts .links-container .email-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts .links-container a {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgb(41, 41, 41);
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.skills {
+  padding: 20px;
+}
+
+.skills .skills-title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skills .slills-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 10px;
+  text-align: center;
+}
+
+.skills .skills-item-img {
+  width: 80px;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.all-projects {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.all-projects .projects-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.all-projects .projects-list .zoo,
+.all-projects .projects-list .gem,
+.all-projects .projects-list .momentum {
+  width: 70%;
+  margin-top: 30px;
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: rgb(220, 20, 60);
+}
+
+.all-projects .projects-list .zoo:hover,
+.all-projects .projects-list .gem:hover,
+.all-projects .projects-list .momentum:hover {
+  text-decoration: underline;
+  color: rgb(178, 34, 34);
+}
+
+.codewars {
+  font-size: 2.2rem;
+}
+
+.about {
+  padding: 0 20px;
+}
+
+.about .about-title {
+  font-size: 2.4rem;
+  margin-top: 40px;
+}
+
+.about .education,
+.about .hobbies,
+.about .english-level,
+.about .web {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgb(41, 41, 41);
+}
+
+.footer-wrapper {
+  max-width: 1280px;
+  min-height: 50px;
+  margin: 0 auto;
+}
+
+.footer-wrapper .footer-list {
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-wrapper .footer-list .github a {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(205, 92, 92);
+}
+
+.footer-wrapper .footer-list .preschool-logo img {
+  width: 150px;
+}
