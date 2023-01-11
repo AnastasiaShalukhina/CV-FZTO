@@ -8,17 +8,17 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
   background: linear-gradient(rgb(182, 244, 146),
     rgb(51, 139, 147));
 }
 
-.header-wrapper {
+.wrapper {
   max-width: 1280px;
-  /* background-color: rgb(231, 255, 222); */
+  margin: 0 auto;
 }
 
-.header-wrapper {
+.header__wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -27,7 +27,7 @@ body {
   padding: 15px 20px;
 }
 
-.logo {
+.header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,24 +40,24 @@ body {
   transition: all ease-in .3s;
 }
 
-.logo:hover {
+.header__logo:hover {
   border: 3px solid rgb(255, 250, 205);
   background-color: rgb(0, 189, 113);
   font-weight: 900;
 }
 
-.nav-menu .nav-list {
+.nav-menu__list {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   padding-left: 0;
 }
 
-.nav-menu .nav-item:not(:last-child) {
+.nav-menu__item:not(:last-child) {
   margin-right: 15px;
 }
 
-.nav-menu a {
+.nav-menu__link {
   font-family: Arial;
   font-size: 20px;
   font-weight: 400;
@@ -68,13 +68,8 @@ body {
   text-decoration: none;
 }
 
-.nav-menu a:hover {
+.nav-menu__link:hover {
   text-decoration: underline;
-}
-
-.main-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 .contacts {
@@ -83,45 +78,46 @@ body {
   padding: 0 20px;
 }
 
-.contacts .avatar img {
+.avatar__image {
   width: 200px;
   border-radius: 20px;
 }
 
-.contacts .contacts-data {
+.contacts__data {
   width: 80%;
 }
 
-.contacts .user-title {
+.contacts__title {
   text-align: center;
   margin-bottom: 30px;
   margin-top: 0;
   font-size: 3rem;
 }
 
-.contacts .social-header {
+.socials__title {
   margin-bottom: 30px;
+  padding-left: 20px;
   font-size: 2.4rem;
 }
 
-.contacts .links-container {
+.socials__links {
   display: flex;
   justify-content: space-evenly;
 }
 
-.contacts .links-container .email-link img {
-  width: 48px;
-}
-
-.contacts .links-container .discord-link,
-.contacts .links-container .linkedIn-link,
-.contacts .links-container .email-link {
+.links-container__linkedIn,
+.links-container__email {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.contacts .links-container a {
+.links-container__image.email,
+.links-container__image.linkedIn {
+  width: 48px;
+}
+
+.links-container__link {
   font-family: Arial;
   font-size: 20px;
   font-weight: 400;
@@ -133,47 +129,25 @@ body {
   margin-top: 20px;
 }
 
-.skills {
-  padding: 20px;
-}
-
-.skills .skills-title {
-  font-size: 2.4rem;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.skills .slills-list {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px 10px;
-  text-align: center;
-}
-
-.skills .skills-item-img {
-  width: 80px;
-}
-
-.projects-title {
+.projects__title {
   text-align: center;
   font-size: 2.4rem;
 }
 
-.all-projects {
+.projects-container {
   display: flex;
   justify-content: space-evenly;
 }
 
-.all-projects .projects-list {
+.projects-container__list {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.all-projects .projects-list .zoo,
-.all-projects .projects-list .gem,
-.all-projects .projects-list .momentum {
+.projects-container__zoo,
+.projects-container__gem,
+.projects-container__momentum {
   width: 70%;
   margin-top: 30px;
   font-size: 2.2rem;
@@ -181,30 +155,52 @@ body {
   color: rgb(220, 20, 60);
 }
 
-.all-projects .projects-list .zoo:hover,
-.all-projects .projects-list .gem:hover,
-.all-projects .projects-list .momentum:hover {
+.projects-container__zoo:hover,
+.projects-container__gem:hover,
+.projects-container__momentum:hover {
   text-decoration: underline;
   color: rgb(178, 34, 34);
 }
 
-.codewars {
+.projects-container__codewars {
   font-size: 2.2rem;
+}
+
+.skills {
+  padding: 20px;
+}
+
+.skills__title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skills-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 10px;
+  text-align: center;
+}
+
+.skills-list__img {
+  width: 80px;
 }
 
 .about {
   padding: 0 20px;
 }
 
-.about .about-title {
+.about__title {
   font-size: 2.4rem;
   margin-top: 40px;
 }
 
-.about .education,
-.about .hobbies,
-.about .english-level,
-.about .web {
+.about__education,
+.about__english,
+.about__web,
+.about__hobbies {
   font-family: Arial;
   font-size: 20px;
   font-weight: 400;
@@ -220,22 +216,10 @@ body {
   margin: 0 auto;
 }
 
-.footer-wrapper .footer-list {
+.footer__year {
   min-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
+  text-align: center;
   margin: 0;
   padding: 0;
-}
-
-.footer-wrapper .footer-list .github a {
-  font-size: 20px;
-  text-decoration: none;
-  color: rgb(205, 92, 92);
-}
-
-.footer-wrapper .footer-list .preschool-logo img {
-  width: 150px;
+  font-size: 2.0rem;
 }
